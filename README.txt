@@ -47,7 +47,7 @@ http://rubyforge.org/projects/libarchive
 
 == Source Code
 
-http://coderepos.org/share/browser/lang/ruby/libarchive/trunk/
+https://github.com/winebarrel/Libarchive-Ruby
 
 == Dependency
 
@@ -135,7 +135,7 @@ gem install libarchive
 Libarchive/Ruby(mswin32) contains Libarchive(2.6.0) and libbzip2(1.0.5).
 
 * Libarchive
-  * http://people.freebsd.org/~kientzle/libarchive/
+  * http://code.google.com/p/libarchive/
   * see {COPYING.libarchive}[link:files/COPYING_libarchive.html]
 
 * libbzip2
