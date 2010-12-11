@@ -553,7 +553,7 @@ static VALUE rb_libarchive_entry_set_gid(VALUE self, VALUE v_gid) {
   Data_Get_Struct(self, struct rb_libarchive_entry_container, p);
   Check_Entry(p);
   Check_Type(v_gid, T_FIXNUM);
-  archive_entry_set_gid(p->ae, NUM2LONG(v_gid));
+  archive_entry_set_gid(p->ae, NUM2INT(v_gid));
   return Qnil;
 }
 
@@ -794,7 +794,7 @@ static VALUE rb_libarchive_entry_set_uid(VALUE self, VALUE v_uid) {
   Data_Get_Struct(self, struct rb_libarchive_entry_container, p);
   Check_Entry(p);
   Check_Type(v_uid, T_FIXNUM);
-  archive_entry_set_uid(p->ae, NUM2LONG(v_uid));
+  archive_entry_set_uid(p->ae, NUM2INT(v_uid));
   return Qnil;
 }
 
