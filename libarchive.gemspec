@@ -2,7 +2,9 @@ Gem::Specification.new do |spec|
   spec.name              = 'libarchive'
   spec.version           = '0.1.1'
   spec.summary           = 'Ruby bindings for Libarchive.'
-  spec.files             = Dir.glob('ext/**/*') + %w(README.txt libarchive.c COPYING.libarchive LICENSE.libbzip2)
+  spec.require_paths     = %w(lib lib/i386-mswin32)
+  spec.files             = %w(lib/libarchive_ruby.rb lib/i386-mswin32/ruby/libarchive.so README.txt libarchive.c COPYING.libarchive LICENSE.libbzip2)
+  spec.files             = Dir.glob('ext/**/*') + %w(lib/libarchive_ruby.r README.txt libarchive.c COPYING.libarchive LICENSE.libbzip2)
   spec.author            = 'winebarrel'
   spec.email             = 'sgwr_dts@yahoo.co.jp'
   spec.homepage          = 'http://libarchive.rubyforge.org'
