@@ -45,7 +45,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="C:\usr\local\ruby-1.8\lib\ruby\1.8\i386-mswin32;C:\usr\local\libarchive-2.6.0\libarchive;C:\usr\local\zlib123-dll\include;C:\usr\local\bzip2-1.0.5;$(ProjectDir)"
+				AdditionalIncludeDirectories="&quot;C:\usr\local\ruby-1.8\lib\ruby\1.8\i386-mswin32&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive&quot;;&quot;C:\usr\local\zlib123-dll\include&quot;;&quot;C:\usr\local\bzip2-1.0.5&quot;;&quot;$(ProjectDir)&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBARCHIVE_EXPORTS;LIBARCHIVE_STATIC;_CRT_SECURE_NO_WARNINGS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -65,10 +65,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="msvcrt-ruby18.lib libarchive-vc90-mt-d.lib zdll.lib libbz2.lib"
-				OutputFile="$(OutDir)\libarchive_ruby.so"
+				AdditionalDependencies="msvcrt-ruby18.lib archive_static.lib zdll.lib libbz2.lib"
+				OutputFile="$(OutDir)\libarchive-ruby.so"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.6.0\lib&quot;;&quot;C:\usr\local\zlib123-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.5\Debug&quot;"
+				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive\Debug&quot;;&quot;C:\usr\local\zlib125-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.6\Debug&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
@@ -122,7 +122,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;C:\usr\local\ruby-1.8\lib\ruby\1.8\i386-mswin32&quot;;&quot;C:\usr\local\libarchive-2.6.0\libarchive&quot;;&quot;C:\usr\local\zlib123-dll\include&quot;;&quot;C:\usr\local\bzip2-1.0.5&quot;;&quot;$(ProjectDir)&quot;"
+				AdditionalIncludeDirectories="&quot;C:\usr\local\ruby-1.8\lib\ruby\1.8\i386-mswin32&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive&quot;;&quot;C:\usr\local\zlib123-dll\include&quot;;&quot;C:\usr\local\bzip2-1.0.5&quot;;&quot;$(ProjectDir)&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBARCHIVE_EXPORTS;LIBARCHIVE_STATIC;_CRT_SECURE_NO_WARNINGS"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
@@ -141,10 +141,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="msvcrt-ruby18.lib libarchive-vc90-mt.lib zdll.lib libbz2.lib"
-				OutputFile="$(OutDir)\libarchive_ruby.so"
+				AdditionalDependencies="msvcrt-ruby18.lib archive_static.lib zdll.lib libbz2.lib"
+				OutputFile="$(OutDir)\libarchive-ruby.so"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.6.0\lib&quot;;&quot;C:\usr\local\zlib123-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.5\Release&quot;"
+				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive\Release&quot;;&quot;C:\usr\local\zlib125-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.6\Release&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				OptimizeReferences="2"
@@ -171,7 +171,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy &quot;$(OutDir)\libarchive_ruby.so&quot; &quot;$(ProjectDir)lib\i386-mswin32&quot;"
+				CommandLine="copy &quot;$(OutDir)\libarchive-ruby.so&quot; &quot;$(ProjectDir)lib\i386-mswin32&quot;"
 			/>
 		</Configuration>
 	</Configurations>
