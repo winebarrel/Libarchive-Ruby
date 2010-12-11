@@ -632,7 +632,7 @@ static VALUE rb_libarchive_entry_set_mode(VALUE self, VALUE v_mode) {
   struct rb_libarchive_entry_container *p;
   Data_Get_Struct(self, struct rb_libarchive_entry_container, p);
   Check_Entry(p);
-  Check_Type(v_mode, T_STRING);
+  Check_Type(v_mode, T_FIXNUM);
   archive_entry_set_mode(p->ae, NUM2INT(v_mode));
   return Qnil;
 }
@@ -702,7 +702,7 @@ static VALUE rb_libarchive_entry_set_perm(VALUE self, VALUE v_perm) {
   struct rb_libarchive_entry_container *p;
   Data_Get_Struct(self, struct rb_libarchive_entry_container, p);
   Check_Entry(p);
-  Check_Type(v_perm, T_STRING);
+  Check_Type(v_perm, T_FIXNUM);
   archive_entry_set_perm(p->ae, NUM2INT(v_perm));
   return Qnil;
 }
