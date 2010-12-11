@@ -78,7 +78,7 @@ gem install libarchive
     end
 
 === creating archive
-    require 'libarchive_ruby'
+    require 'ruby/libarchive'
     
     Archive.write_open_filename('foo.tar.bz2', Archive::COMPRESSION_BZIP2, Archive::FORMAT_TAR_USTAR) do |ar|
       Dir.glob('*.c').each do |fn|
