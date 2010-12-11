@@ -61,7 +61,7 @@ gem install libarchive
 
 == Example
 === reading archive
-    require 'libarchive_ruby'
+    require 'libarchive-ruby'
     
     Archive.read_open_filename('foo.tar.gz') do |ar|
       while entry = ar.next_header
