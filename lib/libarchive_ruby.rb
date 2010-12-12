@@ -1,1 +1,1 @@
-require 'ruby/libarchive'
+require 'rblibarchive'
