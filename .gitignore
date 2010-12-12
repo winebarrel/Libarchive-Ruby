@@ -6,3 +6,8 @@ libarchive.vcproj.*
 doc/
 *.gem
 *.tar.*
+ext/Makefile
+ext/*.o
+ext/*.so
+ext/config.*
+ext/mkmf.log
