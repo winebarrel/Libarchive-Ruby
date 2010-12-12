@@ -80,7 +80,7 @@ gem install libarchive
 === creating archive
     require 'libarchive'
     
-    Archive.write_open_filename('foo.tar.bz2', Archive::COMPRESSION_BZIP2, Archive::FORMAT_TAR_USTAR) do |ar|
+    Archive.write_open_filename('foo.tar.bz2', Archive::COMPRESSION_BZIP2, Archive::FORMAT_TAR) do |ar|
       Dir.glob('*.c').each do |fn|
         ar.new_entry do |entry|
           entry.copy_stat(fn)
