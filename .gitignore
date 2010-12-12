@@ -3,3 +3,6 @@ Release/
 libarchive.ncb
 libarchive.suo
 libarchive.vcproj.*
+doc/
+*.gem
+*.tar.*
