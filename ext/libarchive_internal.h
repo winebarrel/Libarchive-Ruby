@@ -45,7 +45,7 @@
 #define DLLEXPORT
 #endif
 
-#define VERSION          "0.1.1"
+#define VERSION          "0.1.2"
 #define BLOCK_SIZE       10240
 #define DATA_BUFFER_SIZE 65536
 
