@@ -147,7 +147,7 @@
 				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive\Release&quot;;&quot;C:\usr\local\zlib125-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.6\Release&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="2"
-				OptimizeReferences="2"
+				OptimizeReferences="1"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
 			/>
