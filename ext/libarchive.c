@@ -29,7 +29,9 @@ void DLLEXPORT Init_rblibarchive() {
 #ifdef HAVE_ZLIB_H
   rb_define_const(rb_mArchive, "COMPRESSION_GZIP",     INT2NUM(ARCHIVE_COMPRESSION_GZIP));
 #endif
+#ifdef HAVE_BZLIB_H
   rb_define_const(rb_mArchive, "COMPRESSION_BZIP2",    INT2NUM(ARCHIVE_COMPRESSION_BZIP2));
+#ifdef HAVE_ZLIB_H
   rb_define_const(rb_mArchive, "COMPRESSION_COMPRESS", INT2NUM(ARCHIVE_COMPRESSION_COMPRESS));
   // XXX:
   /*
