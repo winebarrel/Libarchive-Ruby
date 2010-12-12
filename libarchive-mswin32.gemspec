@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.platform          = 'mswin32'
   spec.summary           = 'Ruby bindings for Libarchive.'
   spec.require_paths     = %w(lib lib/i386-mswin32)
-  spec.files             = %w(lib/libarchive_ruby.rb lib/i386-mswin32/ruby/libarchive.so README.txt libarchive.c COPYING.libarchive LICENSE.libbzip2)
+  spec.files             = %w(lib/libarchive.rb lib/libarchive_ruby.rb lib/i386-mswin32/rblibarchive.so README.txt libarchive.c COPYING.libarchive LICENSE.libbzip2)
   spec.author            = 'winebarrel'
   spec.email             = 'sgwr_dts@yahoo.co.jp'
   spec.homepage          = 'http://libarchive.rubyforge.org'

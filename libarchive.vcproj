@@ -66,7 +66,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="msvcrt-ruby18.lib archive_static.lib zdll.lib libbz2.lib"
-				OutputFile="$(OutDir)\libarchive.so"
+				OutputFile="$(OutDir)\rblibarchive.so"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive\Debug&quot;;&quot;C:\usr\local\zlib125-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.6\Debug&quot;"
 				GenerateDebugInformation="true"
@@ -142,7 +142,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="msvcrt-ruby18.lib archive_static.lib zdll.lib libbz2.lib"
-				OutputFile="$(OutDir)\libarchive.so"
+				OutputFile="$(OutDir)\rblibarchive.so"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="&quot;C:\usr\local\ruby-1.8\lib&quot;;&quot;C:\usr\local\libarchive-2.8.4\libarchive\Release&quot;;&quot;C:\usr\local\zlib125-dll\lib&quot;;&quot;C:\usr\local\bzip2-1.0.6\Release&quot;"
 				GenerateDebugInformation="true"
@@ -171,7 +171,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy &quot;$(OutDir)\libarchive.so&quot; &quot;$(ProjectDir)lib\i386-mswin32\ruby&quot;"
+				CommandLine="copy &quot;$(OutDir)\rblibarchive.so&quot; &quot;$(ProjectDir)lib\i386-mswin32&quot;"
 			/>
 		</Configuration>
 	</Configurations>
@@ -273,17 +273,21 @@
 		<Filter
 			Name="lib"
 			>
+			<File
+				RelativePath=".\lib\libarchive.rb"
+				>
+			</File>
+			<File
+				RelativePath=".\lib\libarchive_ruby.rb"
+				>
+			</File>
 			<Filter
 				Name="i386-mswin32"
 				>
-				<Filter
-					Name="ruby"
+				<File
+					RelativePath=".\lib\i386-mswin32\rblibarchive.so"
 					>
-					<File
-						RelativePath=".\lib\i386-mswin32\ruby\libarchive.so"
-						>
-					</File>
-				</Filter>
+				</File>
 			</Filter>
 		</Filter>
 		<File
