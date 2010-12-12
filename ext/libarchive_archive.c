@@ -25,7 +25,7 @@ static VALUE rb_libarchive_archive_position_compressed(VALUE self) {
   struct rb_libarchive_archive_container *p;
   Data_Get_Struct(self, struct rb_libarchive_archive_container, p);
   Check_Archive(p);
-  return LL2NUM(archive_position_compressed(p->ar));
+  return LONG2NUM(archive_position_compressed(p->ar));
 }
 
 /* */
@@ -33,7 +33,7 @@ static VALUE rb_libarchive_archive_position_uncompressed(VALUE self) {
   struct rb_libarchive_archive_container *p;
   Data_Get_Struct(self, struct rb_libarchive_archive_container, p);
   Check_Archive(p);
-  return LL2NUM(archive_position_uncompressed(p->ar));
+  return LONG2NUM(archive_position_uncompressed(p->ar));
 }
 
 /* */

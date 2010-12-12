@@ -345,7 +345,7 @@ static VALUE rb_libarchive_entry_size(VALUE self) {
   struct rb_libarchive_entry_container *p;
   Data_Get_Struct(self, struct rb_libarchive_entry_container, p);
   Check_Entry(p);
-  return LL2NUM(archive_entry_size(p->ae));
+  return LONG2NUM(archive_entry_size(p->ae));
 }
 
 /* */
@@ -743,7 +743,7 @@ static VALUE rb_libarchive_entry_set_size(VALUE self, VALUE v_size) {
   Data_Get_Struct(self, struct rb_libarchive_entry_container, p);
   Check_Entry(p);
   Check_Type(v_size, T_FIXNUM);
-  archive_entry_set_size(p->ae, NUM2LL(v_size));
+  archive_entry_set_size(p->ae, NUM2LONG(v_size));
   return Qnil;
 }
 
