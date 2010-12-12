@@ -61,7 +61,7 @@ gem install libarchive
 
 == Example
 === reading archive
-    require 'libarchive-ruby'
+    require 'libarchive'
     
     Archive.read_open_filename('foo.tar.gz') do |ar|
       while entry = ar.next_header
@@ -78,7 +78,7 @@ gem install libarchive
     end
 
 === creating archive
-    require 'ruby/libarchive'
+    require 'libarchive'
     
     Archive.write_open_filename('foo.tar.bz2', Archive::COMPRESSION_BZIP2, Archive::FORMAT_TAR_USTAR) do |ar|
       Dir.glob('*.c').each do |fn|
@@ -98,7 +98,7 @@ gem install libarchive
     end
 
 === creating archive by extarnal program
-    require 'libarchive_ruby'
+    require 'libarchive'
     
     Archive.write_open_filename('foo.tar.lzo', 'lzop', Archive::FORMAT_TAR_USTAR) do |ar|
       ...
