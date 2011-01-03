@@ -47,7 +47,7 @@ http://rubyforge.org/projects/libarchive
 
 == Source Code
 
-https://github.com/winebarrel/Libarchive-Ruby
+https://bitbucket.org/winebarrel/libarchive-ruby
 
 == Dependency
 
