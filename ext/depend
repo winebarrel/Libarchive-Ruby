@@ -1,0 +1,19 @@
+archive_read_support_compression.o: archive_read_support_compression.c
+archive_read_support_format.o: archive_read_support_format.c
+archive_write_open_rb_str.o: archive_write_open_rb_str.c
+archive_write_set_compression.o: archive_write_set_compression.c
+libarchive.o: libarchive.c libarchive_internal.h \
+  archive_write_open_rb_str.h archive_read_support_compression.h \
+  archive_read_support_format.h archive_write_set_compression.h
+libarchive_archive.o: libarchive_archive.c libarchive_internal.h \
+  archive_write_open_rb_str.h archive_read_support_compression.h \
+  archive_read_support_format.h archive_write_set_compression.h
+libarchive_entry.o: libarchive_entry.c libarchive_internal.h \
+  archive_write_open_rb_str.h archive_read_support_compression.h \
+  archive_read_support_format.h archive_write_set_compression.h
+libarchive_reader.o: libarchive_reader.c libarchive_internal.h \
+  archive_write_open_rb_str.h archive_read_support_compression.h \
+  archive_read_support_format.h archive_write_set_compression.h
+libarchive_writer.o: libarchive_writer.c libarchive_internal.h \
+  archive_write_open_rb_str.h archive_read_support_compression.h \
+  archive_read_support_format.h archive_write_set_compression.h
