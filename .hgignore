@@ -10,5 +10,5 @@ doc
 ext/Makefile
 ext/*.o
 ext/*.so
-ext/config.*
+ext/config.h
 ext/mkmf.log
