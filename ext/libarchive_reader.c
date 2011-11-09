@@ -272,7 +272,7 @@ static VALUE rb_libarchive_reader_save_data(int argc, VALUE *argv, VALUE self) {
   }
 
   r = archive_read_data_into_fd(p->ar, fd);
-  _close(fd);
+  close(fd);
 
   if (r != ARCHIVE_OK) {
     rb_raise(rb_eArchiveError, "Save data failed: %s", archive_error_string(p->ar));
