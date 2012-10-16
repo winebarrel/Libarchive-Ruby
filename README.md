@@ -46,11 +46,11 @@ Libarchive is a programming library that can create and read several different s
 
 ## Project Page
 
-http://rubyforge.org/projects/libarchive
+[http://rubyforge.org/projects/libarchive](http://rubyforge.org/projects/libarchive)
 
 ## Source Code
 
-https://bitbucket.org/winebarrel/libarchive-ruby
+[https://bitbucket.org/winebarrel/libarchive-ruby](https://bitbucket.org/winebarrel/libarchive-ruby)
 
 ## Dependency
 
@@ -60,60 +60,59 @@ Please install Libarchive. (version 2.6.0 or more is recommended)
 
 ## Install
 
-gem install libarchive
+    gem install libarchive
 
 ## Example
 
 ### reading archive
 
-:::ruby
-    require 'libarchive'
-        
-    Archive.read_open_filename('foo.tar.gz') do |ar|
-      while entry = ar.next_header
-        name = entry.pathname
-        data = ar.read_data
-        
-        #data = ""
-        #ar.read_data(1024) do |x|
-        #  data << x
-        #end
-        
-        puts "#{name} (size=#{data.size})"
-      end
-    end
+    :::ruby
+        require 'libarchive'
+            
+        Archive.read_open_filename('foo.tar.gz') do |ar|
+          while entry = ar.next_header
+            name = entry.pathname
+            data = ar.read_data
+            
+            #data = ""
+            #ar.read_data(1024) do |x|
+            #  data << x
+            #end
+            
+            puts "#{name} (size=#{data.size})"
+          end
+        end
 
 ### creating archive
 
-:::ruby
-    require 'libarchive'
-        
-    Archive.write_open_filename('foo.tar.bz2', Archive::COMPRESSION_BZIP2, Archive::FORMAT_TAR) do |ar|
-      Dir.glob('*.c').each do |fn|
-        ar.new_entry do |entry|
-          entry.copy_stat(fn)
-          entry.pathname = fn
-          ar.write_header(entry)
-          ar.write_data(open(fn) {|f| f.read })
-        
-          #open(fn) do |f|
-          #  ar.write_data do
-          #    f.read(1024)
-          #  end
-          #end
+    :::ruby
+        require 'libarchive'
+            
+        Archive.write_open_filename('foo.tar.bz2', Archive::COMPRESSION_BZIP2, Archive::FORMAT_TAR) do |ar|
+          Dir.glob('*.c').each do |fn|
+            ar.new_entry do |entry|
+              entry.copy_stat(fn)
+              entry.pathname = fn
+              ar.write_header(entry)
+              ar.write_data(open(fn) {|f| f.read })
+            
+              #open(fn) do |f|
+              #  ar.write_data do
+              #    f.read(1024)
+              #  end
+              #end
+            end
+          end
         end
-      end
-    end
 
 ### creating archive by extarnal program
 
-```ruby
-require 'libarchive'
-
-Archive.write_open_filename('foo.tar.lzo', 'lzop', Archive::FORMAT_TAR_USTAR) do |ar|
-  ...
-end
-```
+    :::ruby
+        require 'libarchive'
+        
+        Archive.write_open_filename('foo.tar.lzo', 'lzop', Archive::FORMAT_TAR_USTAR) do |ar|
+          ...
+        end
 
 ## License
 
@@ -149,8 +148,8 @@ Libarchive/Ruby(mswin32) contains Libarchive(2.6.0) and libbzip2(1.0.5).
 
 * Libarchive
   * http://code.google.com/p/libarchive/
-  * see [[https://bitbucket.org/winebarrel/libarchive-ruby/src/tip/COPYING.libarchive?at=default|COPYING.libarchive]]
+  * see [COPYING.libarchive](https://bitbucket.org/winebarrel/libarchive-ruby/src/tip/COPYING.libarchive)
 
 * libbzip2
   * http://www.bzip.org/
-  * see [[https://bitbucket.org/winebarrel/libarchive-ruby/src/tip/LICENSE.libbzip2?at=default|LICENSE.libbzip2]]
+  * see [LICENSE.libbzip2](https://bitbucket.org/winebarrel/libarchive-ruby/src/tip/LICENSE.libbzip2)
